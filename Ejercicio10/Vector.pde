@@ -30,8 +30,8 @@ class Vector{
     stroke(20);
     line(this.getOrigen().x,
          this.getOrigen().y,
-         this.getDestino().x,
-         this.getDestino().y);
+         this.getOrigen().x+this.getDestino().x,
+         this.getOrigen().y+this.getDestino().y);
   }
   
   // Método display con color
@@ -40,7 +40,17 @@ class Vector{
     stroke(col);
     line(this.getOrigen().x,
          this.getOrigen().y,
-         this.getDestino().x,
-         this.getDestino().y);
+         this.getOrigen().x+this.getDestino().x,
+         this.getOrigen().y+this.getDestino().y);
+  }
+  
+  //Método para sumar vectores
+  public Vector sumar(Vector v){
+    return new Vector(this.getOrigen(), PVector.add(this.getDestino(), v.getDestino()));
+  }
+  
+  //Método para restar vectores
+  public Vector restar(Vector v){
+    return new Vector(this.getOrigen(), PVector.sub(this.getDestino(), v.getDestino()));
   }
 }

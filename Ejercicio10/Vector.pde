@@ -32,6 +32,9 @@ class Vector{
          this.getOrigen().y,
          this.getOrigen().x+this.getDestino().x,
          this.getOrigen().y+this.getDestino().y);
+    strokeWeight(9);
+    stroke(#ffffff);
+    point(this.getDestino().x, this.getDestino().y);
   }
   
   // Método display con color
@@ -42,6 +45,10 @@ class Vector{
          this.getOrigen().y,
          this.getOrigen().x+this.getDestino().x,
          this.getOrigen().y+this.getDestino().y);
+    strokeWeight(9);
+    stroke(#ffffff);
+    point(PVector.add(this.getOrigen(), this.getDestino()).x,
+          PVector.add(this.getOrigen(), this.getDestino()).y);
   }
   
   //Método para sumar vectores

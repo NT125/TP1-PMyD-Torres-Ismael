@@ -24,7 +24,7 @@ class Vector{
   }
   
   //--- MÉTODOS ---
-  // Método display
+  // Método display básico
   public void display(){
     strokeWeight(3);
     stroke(20);
@@ -32,21 +32,17 @@ class Vector{
          this.getOrigen().y,
          this.getOrigen().x+this.getDestino().x,
          this.getOrigen().y+this.getDestino().y);
-    strokeWeight(9);
-    stroke(#ffffff);
     point(this.getDestino().x, this.getDestino().y);
   }
   
-  // Método display con color
-  public void display(color col){
-    strokeWeight(3);
+  // Método display con color y grosor variable
+  public void display(color col, int grosor){
+    strokeWeight(grosor);
     stroke(col);
     line(this.getOrigen().x,
          this.getOrigen().y,
          this.getOrigen().x+this.getDestino().x,
          this.getOrigen().y+this.getDestino().y);
-    strokeWeight(9);
-    stroke(#ffffff);
     point(PVector.add(this.getOrigen(), this.getDestino()).x,
           PVector.add(this.getOrigen(), this.getDestino()).y);
   }

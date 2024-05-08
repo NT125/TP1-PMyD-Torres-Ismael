@@ -1,7 +1,9 @@
 class Player extends GameObject{  
 
   // --- CONSTRUCTOR SIN PARÁMETROS ---
-  public Player(){}
+  public Player(){
+    this.pos = new PVector(0,0);
+  }
   
   // --- CONSTRUCTOR PARAMETRIZADO ---
   public Player(PVector pos){

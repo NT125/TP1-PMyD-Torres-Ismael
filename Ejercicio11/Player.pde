@@ -1,21 +1,27 @@
 class Player extends GameObject{  
+  
+  private boolean isDetected;
 
   // --- CONSTRUCTOR SIN PARÁMETROS ---
   public Player(){
-    this.pos = new PVector(0,0);
-  }
-  
-  // --- CONSTRUCTOR PARAMETRIZADO ---
-  public Player(PVector pos){
-    this.pos = pos;
+    this.pos = new PVector(mouseX,mouseY);
+    this.isDetected = false;
+    this.sprite = loadImage("player.png");
   }
   
   // --- MÉTODOS ---
   // Método display
   public void display(){
-    fill(#efeaff);
-    noStroke();
-    circle(this.pos.x, this.pos.y, 20);
+    imageMode(CENTER);
+    image(this.sprite, this.pos.x, this.pos.y, 80, 80);
   }
-
+  
+  // --- GETTERS Y SETTERS ---
+  public boolean getDetected(){
+    return this.isDetected;
+  }
+  
+  public void setDetected(boolean isDetected){
+    this.isDetected = isDetected;
+  }
 }

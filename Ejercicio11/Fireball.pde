@@ -3,16 +3,16 @@ class Fireball extends GameObject{
 
   // --- CONSTRUCTOR ---
   public Fireball(){
-    this.pos = new PVector(width/2,height/2);
+    this.pos = new PVector(width/3+50,height/2);
     this.speed = 20.0;
+    this.sprite = loadImage("fireball.png");
   }
   
   // --- MÉTODOS ---
   // Método display
   public void display(){
-    fill(#ffaa00);
-    noStroke();
-    circle(this.getPos().x, this.getPos().y, 20);
+    imageMode(CENTER);
+    image(this.sprite, this.pos.x, this.pos.y, 40, 40);
   }
   
   // Método para moverse
@@ -20,9 +20,7 @@ class Fireball extends GameObject{
     this.setPos(this.getPos().add(direccion.mult(speed)));
     
     if(this.getPos().x > width || (this.getPos().y < 0 || this.getPos().y > height)){
-      this.setPos(new PVector(width/2, height/2));
-    }
-    
+      this.setPos(new PVector(width/3+50, height/2));
+    }    
   }
-
 }

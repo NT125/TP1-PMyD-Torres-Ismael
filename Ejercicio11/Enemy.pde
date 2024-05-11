@@ -5,10 +5,11 @@ class Enemy extends GameObject{
   
   // --- CONSTRUCTOR SIN PARÁMETROS ---
   public Enemy(){
-    this.pos = new PVector(width/2, height/2);
+    this.pos = new PVector(width/3, height/2);
     this.vectorEnemigo = new Vector(this.pos, new PVector(1,0));
     this.vectorEnemigoJugador = new Vector();
     this.jugadorDetectado = false;
+    this.sprite = loadImage("enemySG.png");
   }  
   
   // --- CONSTRUCTOR PARAMETRIZADO ---
@@ -17,6 +18,7 @@ class Enemy extends GameObject{
     this.vectorEnemigo = new Vector(this.pos, new PVector(1,0));
     this.vectorEnemigoJugador = new Vector();
     this.jugadorDetectado = false;
+    this.sprite = loadImage("enemySG.png");
   }
   
   public Vector getVectorEnemigo(){
@@ -38,10 +40,8 @@ class Enemy extends GameObject{
   // --- MÉTODOS ---
   // Método para dibujar al enemigo
   public void display(){
-    fill(#ff5555);
-    noStroke();
-    rectMode(CENTER);
-    square(pos.x, pos.y, 50);
+    imageMode(CENTER);
+    image(this.sprite, this.pos.x, this.pos.y, 80, 80);
   }
   
   // Método para obtener el vector entre el enemigo y el jugador

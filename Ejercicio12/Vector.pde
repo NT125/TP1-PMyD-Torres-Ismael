@@ -121,6 +121,7 @@ class Vector{
     return PVector.dot(this.getDestino(), v.getDestino());
   }
   
+  //Método para obtener el producto cruz
   public PVector cruz(Vector v){
     PVector producto = new PVector(0,0);
     producto = this.getDestino().cross(v.getDestino());

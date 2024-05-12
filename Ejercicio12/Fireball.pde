@@ -1,11 +1,13 @@
 class Fireball extends GameObject{  
   private float speed;
+  private PVector direccion;
 
   // --- CONSTRUCTOR PARAMETRIZADO ---
-  public Fireball(PVector pos){
+  public Fireball(PVector pos, PVector direccion){
     this.pos = pos;
-    this.speed = 10.0;
+    this.speed = 15;
     this.sprite = loadImage("fireball.png");
+    this.direccion = direccion;
   }
   
   // --- MÉTODOS ---
@@ -16,7 +18,7 @@ class Fireball extends GameObject{
   }
   
   // Método para moverse
-  public void move(PVector direccion){
-    this.setPos(this.getPos().add(direccion.mult(speed)));
+  public void move(){
+    this.setPos(this.getPos().add(this.direccion.normalize().mult(speed)));
   }
 }

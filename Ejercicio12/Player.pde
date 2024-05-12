@@ -55,12 +55,10 @@ class Player extends GameObject{
     this.getVectorJugadorEnemigo().setDestino(PVector.sub(enemy.getPos(), this.pos));
   }
   
+  // Método para girar al jugador, alineándose con el enemigo
   public void spin(){
     float angle = PVector.angleBetween(this.getVectorJugador().getDestino(), this.getVectorJugadorEnemigo().getDestino());
-    println("Angle: " + angle);
-    
     PVector rotacion = this.getVectorJugador().cruz(this.getVectorJugadorEnemigo());
-    println("Producto Cruz: " + rotacion);
     
     int direccion = 1;
     if(rotacion.z < 0){
@@ -72,5 +70,11 @@ class Player extends GameObject{
     rotate(angle*direccion);
     this.displayCenter();
     popMatrix();    
+  }
+  
+  // Método para disparar
+  public Fireball disparar(){;
+    PVector direccion = this.getVectorJugadorEnemigo().getDestino();
+    return new Fireball(this.getPos(), direccion);
   }
 }

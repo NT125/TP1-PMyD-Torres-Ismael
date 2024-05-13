@@ -3,12 +3,14 @@ class Ball extends GameObject{
   private Vector vectorObjeto, vectorDireccion;
   private PVector direccion;
   private float velocidad;
+  private int radio;
   
   // --- CONSTRUCTOR PARAMETRIZADO ---
   public Ball(PVector pos, PVector direccion){
     this.pos = pos;
     this.direccion = direccion.normalize();
     this.velocidad = 5;
+    this.radio = 10;
     this.vectorObjeto = new Vector(new PVector(this.getPos().x, this.getPos().y),
                                    new PVector(1,0,0));
     this.vectorDireccion = new Vector(new PVector(this.getPos().x, this.getPos().y),
@@ -18,6 +20,9 @@ class Ball extends GameObject{
   // --- GETTERS Y SETTERS ---
   public PVector getDireccion() { return this.direccion; }
   public void setDireccion(PVector direccion) { this.direccion = direccion; }
+  
+  public int getRadio() { return this.radio; }
+  public void setRadio(int radio) { this.radio = radio; }
   
   // --- MÉTODOS ---
   // Mueve la pelota según la dirección
@@ -30,7 +35,7 @@ class Ball extends GameObject{
      noStroke();
      fill(#eeeefe);
      ellipseMode(CENTER);
-     circle(this.getPos().x, this.getPos().y, 20);
+     circle(this.getPos().x, this.getPos().y, this.getRadio()*2);
   }
   
   // Invierte verticalmente el sentido del movimiento

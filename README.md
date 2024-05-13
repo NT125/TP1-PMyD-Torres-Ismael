@@ -1,10 +1,10 @@
 # Trabajo Práctico 1, Ejercicios en Processing - PMyDJ
-### Ejercicios 10, 11, 12 y 13
+### Tecnicatura en Desarrollo Integral de Videojuegos - Facultad de Ingeniería, UNJu, Año 2024
 
-**Asignatura:** Programación de Mecánicas y Dinámicas de Juegos
+**Asignatura:** Programación de Mecánicas y Dinámicas de Juegos<br>
 **Profesor:** Vega, Ariel Alejandro <br>
 **Alumno:** Torres, Ismael Ignacio Miguel <br>
-**LU:** TUV000005
+**LU:** TUV000095 <br>
 
 Este repositorio contiene el código fuente de los programas interactivos que resuelven
 los ejercicios 10, 11, 12 y 13 del Primer Trabajo Práctico.
@@ -28,3 +28,6 @@ Junto al código se adjunta una historia de usuario con diagrama de elementos vi
 ### Ejercicio 13
 Presentación interactiva que explica la relación entre la reflexión y el producto punto, y cómo se aplica en el desarrollo de videojuegos. Al final tiene una aplicación interactiva incluida que ejemplifica la investigación.<br>
 ![image](https://github.com/NT125/TP1-PMyD-Torres-Ismael/assets/62914776/cfb89cc6-3296-4e61-a47e-5cc1e7926f4b)
+
+
+<sub> *Ismael Ignacio Miguel Torres 2024, Tecnicatura Universitaria en Diseño Integral de Videojuegos, Facultad De Ingeniería, UNJu.* </sub>

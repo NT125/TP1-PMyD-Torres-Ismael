@@ -1,4 +1,4 @@
-public class GameObject{
+public abstract class GameObject{
   protected PVector pos;
   protected PImage sprite;
   
